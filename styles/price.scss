@@ -1,0 +1,29 @@
+.prices {
+    &_table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        border: 3px solid grey;
+        margin-bottom: 60px;
+        width: 70%;
+
+        th, td {
+            border: 1px solid grey;
+            padding: 15px;
+        }
+
+        tr:nth-child(2n) {
+            background: #ccc;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .prices {
+        &_container {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+}

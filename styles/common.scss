@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+
+$main-color: #248771;
+$second-color: #fff;
+
+body {
+    position: relative;
+}
+
+.open {
+    display: flex;
+}
+
+* {
+    font-family: "Proza Libre";
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Cormorant Garamond";
+}
+
+a {
+    text-decoration: none;
+    color: $second-color;
+    font-size: 14px;
+}
+
+.modal {
+    position: absolute;
+    width: 30%;
+    background-color: $second-color;
+    color: black;
+    display: none;
+    justify-content: center;
+    border: 1px #ccc solid;
+    margin: 0 auto;
+    padding-bottom: 15px;
+
+    .close {
+        color: #ccc;
+        margin-left: 100%;
+        position: absolute;
+	    top: 10px;
+	    right: 10px;
+    }
+
+    .close:hover {
+        cursor: pointer;
+    }
+}
+
+.modal:before {
+	content: '';
+	background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.7;
+	z-index: 9999;
+}
+
+.modal-content {
+    position: fixed;
+	top: 20%;
+	left: 50%;
+	padding: 20px;
+	width: 360px;
+	margin-left: -200px;	
+	background: #fff;
+	border: 1px solid orange;
+	border-radius: 4px; 
+	z-index: 99999;
+	opacity: 1;	
+}
+
+.heading {
+    font-size: 42px;
+    color: $main-color;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px;
+}
+
+.header {
+    padding: 40px;
+    background-color: $main-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_logo {
+        width: 50px;
+
+        img {
+            width: 50px;
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    &_list {
+        display: flex;
+        padding-left: 0;
+        list-style-type: none;
+
+        &_link {
+            color: $second-color;
+            text-transform: uppercase;
+            margin-left: 25px;
+            font-weight: 700;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    }
+
+    &_burger {
+        display: none;
+        position: relative;
+        z-index: 50;
+        align-items: center;
+        justify-content: flex-end;
+        width: 30px;
+        height: 18px;
+
+        span {
+            height: 2px;
+            width: 80%;
+            transform: scale(1);
+            background-color: #faf6f2;
+        }
+    }
+
+    &_burger::before, &_burger::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #faf6f2;
+        transition: all 0.3s ease 0s;
+    }
+
+    &_burger::before {
+        top: 0;
+    }
+
+    &_burger::after {
+        bottom: 0;
+    }
+
+    /*Добавляем класс active для анимации иконки бургера*/
+    &_burger.active span {
+        transform: scale(0);
+    }
+
+    &_burger.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0, -50%);
+    }
+
+    &_burger.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0, 50%);
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        &_burger {
+            display: flex;
+        }
+
+        .nav {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            overflow-y: auto;
+            padding: 50px 40px;
+            background-color: $main-color;
+
+            ul {
+                flex-direction: column;
+                row-gap: 30px;
+            }
+        }
+
+        .open {
+            display: flex;
+        }
+    }
+}
+
+.form {
+    background-color: #ccc;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input, button {
+        border-radius: 50px;
+        padding: 15px;
+        border: 1px solid black;
+        margin: 0 20px;
+    }
+
+    .error {
+        color: red;
+        text-align: center;
+    }
+
+    button {
+        background-color: $main-color;
+        color: $second-color;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+.footer {
+    background-color: $main-color;
+    color: $second-color;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    padding: 25px;
+    text-transform: uppercase;
+
+    &_contacts {
+        text-align: center;
+    }
+
+    &_path {
+        text-align: center;
+
+        &_map {
+            color: $second-color;
+        }
+    }
+
+    &_adresses {
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 890px) {
+    .form {
+        flex-direction: column;
+
+        input {
+            margin-bottom: 20px;
+        }
+    }
+
+    .footer {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .advantages {
+        &_circle_info {
+            font-size: 18px;
+        }
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .header {
+        &_list {
+            &_link {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .advantages {
+        &_circles {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_circle {
+            margin-bottom: 40px;
+        }
+
+        &_background {
+            margin-bottom: 0;
+        }
+    }
+
+    .services {
+        &_container {
+            &_images1, &_images2, &_images3, &_images4, &_images5, &_images6 {
+                width: 70%;
+            }
+
+            &_images1::before, &_images2::before, &_images3::before, &_images4::before, &_images5::before, &_images6::before {
+                width: 70%;
+            }
+        }
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        &_list {
+            &_link {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .heading {
+        font-size: 38px;
+    }
+
+    .advantages {
+        &_heading {
+            &_descr {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .header {
+        &_list {
+            flex-direction: column;
+
+            li {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .heading {
+        font-size: 26px;
+    }
+
+    .footer {
+        font-size: 10px;
+
+        a {
+            font-size: 10px;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+    }
+}
+    

@@ -1,0 +1,56 @@
+.classes {
+  background-color: #ccc;
+}
+.classes_container {
+  display: flex;
+  padding: 40px;
+}
+.classes_container_image {
+  width: 50%;
+  margin: 0 25px;
+}
+.classes_container_image img {
+  width: 100%;
+}
+.classes_container_text {
+  width: 50%;
+  margin: 0 25px;
+}
+.classes_container_text p {
+  font-size: 19px;
+}
+.classes_container_subheading {
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 992px) {
+  .classes_container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  .classes_container_text {
+    width: 90%;
+  }
+  .classes_container_image {
+    margin-top: 15px;
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .classes_container_text p {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .classes_container_subheading {
+    font-size: 20px;
+  }
+  .classes_container_text p {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=services.css.map */

@@ -1,0 +1,153 @@
+$main-color: #248771;
+$second-color: #fff;
+
+.advantages {
+    display: block;
+    background-color: #ccc;
+
+    &_heading {
+
+        &_line {
+            width: 100%;
+            height: 1px;
+            background-color: $main-color;
+        }
+
+        &_descr {
+            width: 75%;
+            text-align: center;
+            display: block;
+            margin: 25px auto;
+        }
+    }
+
+    &_background {
+        width: 100%;
+        margin: 40px auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &_circles {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &_circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $main-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 80px;
+
+        &_info {
+            color: $second-color;
+            text-align: center;
+            transition: font-size 0.5s ease-in-out;
+        }
+
+        &:hover &_info {
+            font-size: 20px;
+        }
+    }
+}
+
+.services {
+    &_button {
+        margin-top: 25px;
+        z-index: 1;
+        background-color: $main-color;
+        color: $second-color;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-radius: 50px;
+        padding: 15px;
+        border: 1px solid black;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    &_container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        &_images1:hover .services_button, &_images2:hover .services_button, &_images3:hover .services_button, &_images4:hover .services_button, &_images5:hover .services_button, &_images6:hover .services_button {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        &_images1, &_images2, &_images3, &_images4, &_images5, &_images6 {
+            width: 25%;
+            min-height: 200px;
+            margin: 40px;
+            background: url("../image/1.jpg") center center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: $second-color;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            transition: all 1s ease-in-out;
+        }
+
+        &_images1 h3, &_images2 h3, &_images3 h3, &_images4 h3, &_images5 h3, &_images6 h3 {
+            z-index: 1;
+        }
+
+        &_images2 {
+            background: url("../image/2.jpg") center center/cover no-repeat;
+        }
+
+        &_images3 {
+            background: url("../image/3.jpg") center center/cover no-repeat;
+        }
+
+        &_images4 {
+            background: url("../image/4.jpg") center center/cover no-repeat;
+        }
+
+        &_images5 {
+            background: url("../image/5.jpg") center center/cover no-repeat;
+        }
+
+        &_images6 {
+            background: url("../image/6.jpg") center center/cover no-repeat;
+        }
+
+        &_images1::before, &_images2::before, &_images3::before, &_images4::before, &_images5::before, &_images6::before {
+            content: " ";
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            width: 25%;
+            min-height: 200px;
+            z-index: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .services {
+        &_container {
+            &_images1, &_images2, &_images3, &_images4, &_images5, &_images6 {
+                margin: 20px;
+                width: 40%;
+            }
+
+            &_images1 h3, &_images2 h3, &_images3 h3, &_images4 h3, &_images5 h3, &_images6 h3 {
+                font-size: 20px;
+            }
+
+            &_images1::before, &_images2::before, &_images3::before, &_images4::before, &_images5::before, &_images6::before {
+                width: 40%;
+            }
+        }
+    }
+}

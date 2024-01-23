@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Логопедический центр "Заговори"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/price.css">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_logo">
+        <a href="index.html"><img src="image/logotip.jpg" alt="logo"></a>
+      </div>
+
+      <nav class="nav">
+        <ul class="header_list">
+          <li><a href="index.html" class="header_list_link">На главную</a></li>
+          <li><a href="services.html" class="header_list_link">Услуги</a></li>
+          <li><a href="price.html" class="header_list_link">Цены</a></li>
+          <li><a href="#footer" class="header_list_link contactsLink">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header_burger">
+        <span></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="prices">
+        <h1 class="heading">Цены на наши<br>услуги</h1>
+        <div class="prices_container">
+          <table class="prices_table">
+            <tr>
+              <th>Услуги</th>
+              <th>Разовое посещение (руб)</th>
+              <th>8 занятий (абонемент)</th>
+            </tr>
+
+            <tr>
+              <td>Логопед</td>
+              <td>850</td>
+              <td>6100</td>
+            </tr>
+
+            <tr>
+              <td>Специалист по запуску речи</td>
+              <td>1000</td>
+              <td>7200</td>
+            </tr>
+
+            <tr>
+              <td>Дефектолог</td>
+              <td>1000</td>
+              <td>7200</td>
+            </tr>
+
+            <tr>
+              <td>Психолог</td>
+              <td>1000</td>
+              <td>7200</td>
+            </tr>
+
+            <tr>
+              <td>Раннее развитие</td>
+              <td>850</td>
+              <td>6100</td>
+            </tr>
+
+            <tr>
+              <td>Томатис</td>
+              <td>1200</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>Логопедический массаж</td>
+              <td>750</td>
+              <td>5400</td>
+            </tr>
+
+            <tr>
+              <td>Нейрологопед</td>
+              <td>1100</td>
+              <td>7900</td>
+            </tr>
+
+            <tr>
+              <td>Нейропсихолог</td>
+              <td>1100</td>
+              <td>7900</td>
+            </tr>
+
+            <tr>
+              <td>Дефектолог-сурдопедагог</td>
+              <td>1100</td>
+              <td>7900</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <form class="form">
+        <div>
+          <input type="text" placeholder="ФИО" class="value">
+          <span class="error"></span>
+        </div>
+
+        <div>
+          <input type="tel" placeholder="Ваш телефон" class="value" pattern="\d{3}-\d{2}-\d{3}">
+          <span class="error"></span>
+        </div>
+
+        <div>
+          <input name="text" placeholder="Причина обращения" class="value">
+          <span class="error"></span>
+        </div>
+
+        <div>
+          <button id="openModalBtn" type="submit">Записаться на занятие</button>
+        </div>
+      </form>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeModalBtn">&times;</span>
+          <p>Запрос получен! Вскоре мы с Вами свяжемся!</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer_contacts">
+        <p>Единый телефон</p>
+        <p>+7 (999) 999-99-99</p>
+      </div>
+
+      <div class="footer_path">
+        <p>Как к нам доехать?</p>
+        <a href="map.html" class="footer_path_map">(Нажать)</a>
+      </div>
+
+      <div class="footer_adresses">
+        <p>Адреса филиалов:</p>
+        <p>г. Омск</p>
+        <p>Волшебная, 1</p>
+        <p>Волшебная, 2</p>
+        <p>Волшебная, 3</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+  </body>
+  </html>

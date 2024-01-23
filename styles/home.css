@@ -1,0 +1,123 @@
+.advantages {
+  display: block;
+  background-color: #ccc;
+}
+.advantages_heading_line {
+  width: 100%;
+  height: 1px;
+  background-color: #248771;
+}
+.advantages_heading_descr {
+  width: 75%;
+  text-align: center;
+  display: block;
+  margin: 25px auto;
+}
+.advantages_background {
+  width: 100%;
+  margin: 40px auto;
+}
+.advantages_background img {
+  width: 100%;
+}
+.advantages_circles {
+  display: flex;
+  justify-content: space-around;
+}
+.advantages_circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #248771;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.advantages_circle_info {
+  color: #fff;
+  text-align: center;
+  transition: font-size 0.5s ease-in-out;
+}
+.advantages_circle:hover .advantages_circle_info {
+  font-size: 20px;
+}
+
+.services_button {
+  margin-top: 25px;
+  z-index: 1;
+  background-color: #248771;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 15px;
+  border: 1px solid black;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.services_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.services_container_images1:hover .services_button, .services_container_images2:hover .services_button, .services_container_images3:hover .services_button, .services_container_images4:hover .services_button, .services_container_images5:hover .services_button, .services_container_images6:hover .services_button {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.services_container_images1, .services_container_images2, .services_container_images3, .services_container_images4, .services_container_images5, .services_container_images6 {
+  width: 25%;
+  min-height: 200px;
+  margin: 40px;
+  background: url("../image/1.jpg") center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 1s ease-in-out;
+}
+.services_container_images1 h3, .services_container_images2 h3, .services_container_images3 h3, .services_container_images4 h3, .services_container_images5 h3, .services_container_images6 h3 {
+  z-index: 1;
+}
+.services_container_images2 {
+  background: url("../image/2.jpg") center center/cover no-repeat;
+}
+.services_container_images3 {
+  background: url("../image/3.jpg") center center/cover no-repeat;
+}
+.services_container_images4 {
+  background: url("../image/4.jpg") center center/cover no-repeat;
+}
+.services_container_images5 {
+  background: url("../image/5.jpg") center center/cover no-repeat;
+}
+.services_container_images6 {
+  background: url("../image/6.jpg") center center/cover no-repeat;
+}
+.services_container_images1::before, .services_container_images2::before, .services_container_images3::before, .services_container_images4::before, .services_container_images5::before, .services_container_images6::before {
+  content: " ";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 25%;
+  min-height: 200px;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .services_container_images1, .services_container_images2, .services_container_images3, .services_container_images4, .services_container_images5, .services_container_images6 {
+    margin: 20px;
+    width: 40%;
+  }
+  .services_container_images1 h3, .services_container_images2 h3, .services_container_images3 h3, .services_container_images4 h3, .services_container_images5 h3, .services_container_images6 h3 {
+    font-size: 20px;
+  }
+  .services_container_images1::before, .services_container_images2::before, .services_container_images3::before, .services_container_images4::before, .services_container_images5::before, .services_container_images6::before {
+    width: 40%;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

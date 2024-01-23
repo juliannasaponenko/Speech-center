@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Логопедический центр "Заговори"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/home.css">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_logo">
+        <a href="index.html"><img src="image/logotip.jpg" alt="logo"></a>
+      </div>
+
+      <nav class="nav">
+        <ul class="header_list">
+          <li><a href="index.html" class="header_list_link">На главную</a></li>
+          <li><a href="services.html" class="header_list_link">Услуги</a></li>
+          <li><a href="price.html" class="header_list_link">Цены</a></li>
+          <li><a href="#footer" class="header_list_link contactsLink">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header_burger">
+        <span></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="advantages">
+        <h1 class="advantages_heading heading">Логопедический центр<br>"Заговори"</h1>
+        <div class="advantages_heading_line"></div>
+        <h2 class="advantages_heading_descr">Это сеть специализированных центров, которые основываются на системном подходе к решению проблемы развития детей.</h2>
+        <div class="advantages_heading_line"></div>
+
+        <div class="advantages_background">
+          <img src="background/file_n0ew5.jpg" alt="background-ligo-center">
+        </div>
+
+        <h3 class="heading">Наши преимущества</h3>
+
+        <div class="advantages_circles">
+          <div class="advantages_circle">
+            <div class="advantages_circle_info">Более 2000 <br>выпускников</div>
+          </div>
+
+          <div class="advantages_circle">
+            <div class="advantages_circle_info">25 коррекционных специалистов</div>
+          </div>
+
+          <div class="advantages_circle">
+            <div class="advantages_circle_info">3 филиала</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <h3 class="heading">Наши услуги</h3>
+
+        <div class="services_container">
+          <div class="services_container_images1">
+            <h3>Запуск и развитие речи</h3>
+            <a href="services.html#lounch_speech" class="services_button">Узнать больше</a>
+          </div>
+
+          <div class="services_container_images2">
+            <h3>Ранняя нейрокоррекция</h3>
+            <a href="services.html#neurocorrection" class="services_button">Узнать больше</a>
+          </div>
+
+          <div class="services_container_images3">
+            <h3>Психологическая помощь<br>семье и детям</h3>
+            <a href="services.html#psychological_help" class="services_button">Узнать больше</a>
+          </div>
+
+          <div class="services_container_images4">
+            <h3>Сенсорная интеграция и Томатис</h3>
+            <a href="services.html#sensory_integration" class="services_button">Узнать больше</a>
+          </div>
+
+          <div class="services_container_images5">
+            <h3>Комплексная коррекционная помощь и диагностика</h3>
+            <a href="services.html#diagnostic" class="services_button">Узнать больше</a>
+          </div>
+
+          <div class="services_container_images6">
+            <h3>Общее развитие детей</h3>
+            <a href="services.html#general_development" class="services_button">Узнать больше</a>
+          </div>
+        </div>
+      </section>
+
+      <form class="form">
+        <div>
+          <input type="text" placeholder="ФИО" class="value">
+          <span class="error"></span>
+        </div>
+
+        <div>
+          <input type="tel" placeholder="Ваш телефон" class="value" pattern="\d{3}-\d{2}-\d{3}">
+          <span class="error"></span>
+        </div>
+
+        <div>
+          <input name="text" placeholder="Причина обращения" class="value">
+          <span class="error"></span>
+        </div>
+
+        <div>
+          <button id="openModalBtn" type="submit">Записаться на занятие</button>
+        </div>
+      </form>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeModalBtn">&times;</span>
+          <p>Запрос получен! Вскоре мы с Вами свяжемся!</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer_contacts">
+        <p>Единый телефон</p>
+        <p>+7 (999) 999-99-99</p>
+      </div>
+
+      <div class="footer_path">
+        <p>Как к нам доехать?</p>
+        <a href="map.html" class="footer_path_map">(Нажать)</a>
+      </div>
+
+      <div class="footer_adresses">
+        <p>Адреса филиалов:</p>
+        <p>г. Омск</p>
+        <p>Волшебная, 1</p>
+        <p>Волшебная, 2</p>
+        <p>Волшебная, 3</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+  </body>
+  </html>
